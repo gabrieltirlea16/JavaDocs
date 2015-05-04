@@ -20,7 +20,15 @@ public class ZeroToHeroServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //TODO de implementat
+        resp.setContentType("text/html");
+        resp.getWriter().write(handleRequest(req));
+    }
+
+    private String handleRequest(HttpServletRequest req){
+        String response;
+        StringBuffer sb = new StringBuffer();
+        response = "Hello <b>" + req.getParameter("FirstName") + " " + req.getParameter("LastName") + "</b>! Enjoy Zero To Hero!!";
+        return response;
     }
 
 }
