@@ -8,7 +8,7 @@
  * written consent of Teamnet.
  **/
 
-package ro.teamnet.z2h.web;
+package ro.teamnet.zth.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,12 +20,6 @@ public class ZeroToHeroServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
-        resp.getWriter().write(handleRequest(req));
+        //todo
     }
-
-    private String handleRequest(HttpServletRequest req){
-        return "Hello <b> "+ req.getParameter("firstName") +" "+ req.getParameter("lastName") +"</b>! Enjoy Zero To Hero!!!";
-    }
-
 }
